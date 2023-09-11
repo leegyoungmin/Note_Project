@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KingfisherExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S5Z-QJ-YZs">
+                                <rect key="frame" x="46.666666666666657" y="288.66666666666669" width="300" height="300.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="cWp-uO-k0z"/>
+                                    <constraint firstAttribute="height" constant="300" id="nar-9s-OVe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leq-d1-QKh">
+                                <rect key="frame" x="30" y="618.66666666666663" width="333" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="KF 이미지 불러오기"/>
+                                <connections>
+                                    <action selector="setKingfisherImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6AJ-vj-51s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4I-pY-RdP">
+                                <rect key="frame" x="30" y="661" width="333" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Nuke 이미지 불러오기"/>
+                                <connections>
+                                    <action selector="resetImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOO-X2-95L"/>
+                                    <action selector="setKingfisherImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9n-7V-XGv"/>
+                                    <action selector="setNukeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RzX-hu-gWx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peJ-JJ-NxQ">
+                                <rect key="frame" x="30" y="757" width="333" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="이미지 초기화"/>
+                                <connections>
+                                    <action selector="resetImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Haz-CE-FnM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDK-mZ-CnB">
+                                <rect key="frame" x="30" y="704" width="333" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="AF 이미지 불러오기"/>
+                                <connections>
+                                    <action selector="resetImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQf-Eg-aCr"/>
+                                    <action selector="setAFImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKf-kX-OlK"/>
+                                    <action selector="setKingfisherImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUE-eE-Sdk"/>
+                                    <action selector="setNukeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lm0-Sk-nS5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gDK-mZ-CnB" firstAttribute="trailing" secondItem="i4I-pY-RdP" secondAttribute="trailing" id="01I-F6-NBc"/>
+                            <constraint firstItem="i4I-pY-RdP" firstAttribute="leading" secondItem="leq-d1-QKh" secondAttribute="leading" id="2L8-6U-Nm2"/>
+                            <constraint firstItem="leq-d1-QKh" firstAttribute="top" secondItem="S5Z-QJ-YZs" secondAttribute="bottom" constant="30" id="6fM-id-cDa"/>
+                            <constraint firstItem="S5Z-QJ-YZs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CBk-gh-vtv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="leq-d1-QKh" secondAttribute="trailing" constant="30" id="Eru-Sq-AWe"/>
+                            <constraint firstItem="gDK-mZ-CnB" firstAttribute="leading" secondItem="i4I-pY-RdP" secondAttribute="leading" id="K7K-En-GhD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="peJ-JJ-NxQ" secondAttribute="trailing" constant="30" id="NNG-uY-fb9"/>
+                            <constraint firstItem="i4I-pY-RdP" firstAttribute="trailing" secondItem="leq-d1-QKh" secondAttribute="trailing" id="XPD-e7-THN"/>
+                            <constraint firstItem="gDK-mZ-CnB" firstAttribute="top" secondItem="i4I-pY-RdP" secondAttribute="bottom" constant="8" symbolic="YES" id="YyT-7W-kNP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="peJ-JJ-NxQ" secondAttribute="bottom" constant="26" id="aDX-RX-vky"/>
+                            <constraint firstItem="S5Z-QJ-YZs" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cBH-5N-JH3"/>
+                            <constraint firstItem="i4I-pY-RdP" firstAttribute="top" secondItem="leq-d1-QKh" secondAttribute="bottom" constant="7.3333333333333712" id="clh-Z6-xxd"/>
+                            <constraint firstItem="peJ-JJ-NxQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="r8v-md-Get"/>
+                            <constraint firstItem="leq-d1-QKh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="vGe-hc-QUl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="S5Z-QJ-YZs" id="CX5-7t-vnA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-457" y="-20"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
